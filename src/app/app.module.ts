@@ -15,7 +15,7 @@ import { PatronComponent } from './patron/patron.component';
     AddFormComponent,
     SplashComponent,
     EmployeeComponent,
-    PatronComponent
+    PatronComponent    
   ],
   imports: [
     BrowserModule,

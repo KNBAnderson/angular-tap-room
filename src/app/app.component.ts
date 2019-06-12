@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { DataService } from "./data.service";
+import { Taproom } from './tapRoom';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +9,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'testApp';
-      
+  tapRoom: Taproom
+
+  constructor(private data: DataService) { }
+
+  ngOnInit() {
+    this.data.currentTaproom.subscribe(tapRoom => this.tapRoom = tapRoom)
+  }
 }

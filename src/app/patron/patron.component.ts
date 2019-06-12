@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { DataService } from "../data.service";
+import { Taproom } from '../tapRoom';
+
 
 @Component({
   selector: 'app-patron',
@@ -6,15 +10,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./patron.component.css']
 })
 export class PatronComponent implements OnInit {
-  userName: string;
+  tapRoom: Taproom;
   
-  constructor() { }
+  constructor(private data: DataService) { }
 
   ngOnInit() {
+    this.data.currentTaproom.subscribe(tapRoom => this.tapRoom = tapRoom)
   }
 
+
   show() {
-    console.log(this.userName);    
+    //this.data.updateTaproom
   }
 
 }
