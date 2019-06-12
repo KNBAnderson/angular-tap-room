@@ -1,3 +1,11 @@
-<p>
-  employee works!
-</p>
+<h1>Welcome, {{userName}}!</h1>
+<input [(ngModel)]="message" type="text" name="user">
+
+<button class="btn btn-success" (click)="show()">Show</button>
+<a [routerLink]="''" routerLinkActive="active">Portal</a>
+
+<div *ngFor="let keg of tapRoom.kegs">
+  <h2>{{keg.name}}</h2>
+  <button (click)="tapRoom.sellPint(keg)">Sell</button>
+  <h3>{{keg.volume}}</h3>
+</div>

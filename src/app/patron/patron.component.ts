@@ -11,13 +11,16 @@ import { Taproom } from '../tapRoom';
 })
 export class PatronComponent implements OnInit {
   tapRoom: Taproom;
-  
+  thing;
   constructor(private data: DataService) { }
 
   ngOnInit() {
     this.data.currentTaproom.subscribe(tapRoom => this.tapRoom = tapRoom)
   }
 
+  dostuff() {
+    console.log(this.thing);    
+  }
 
   show() {
     //this.data.updateTaproom

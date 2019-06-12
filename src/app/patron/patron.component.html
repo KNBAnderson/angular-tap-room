@@ -1,11 +1,6 @@
-<h1>Welcome, {{userName}}!</h1>
-<input [(ngModel)]="message" type="text" name="user">
+<input type="text" [(ngModel)]="thing">
 
-<button class="btn btn-success" (click)="show()">Show</button>
-<a [routerLink]="''" routerLinkActive="active">Portal</a>
+<h1>{{thing}}</h1>
 
-<div *ngFor="let keg of tapRoom.kegs">
-  <h2>{{keg.name}}</h2>
-  <button (click)="tapRoom.sellPint(keg)">Sell</button>
-  <h3>{{keg.volume}}</h3>
-</div>
+
+<button (click)="dostuff()"></button>
