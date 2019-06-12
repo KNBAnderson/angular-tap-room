@@ -1,0 +1,21 @@
+body {
+    background-image: url('./../../assets/beerstar_Galactic.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+a {
+    position: relative;
+    top: 50vh;
+}
+
+.btn-primary {
+    left: 50vw;
+}
+
+.btn-danger {
+    right: -50vw;
+}
