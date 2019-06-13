@@ -1,24 +1,42 @@
 img {
     margin: auto;
-    display: block;
+    display: block;       
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 50%;    
 }
 
 a {
-    position: relative;
-    top: 50vh;
+    /* position: fixed; */
+    top: 50vh;    
 }
 
 .btn-primary {
     left: 50vw;
+    
+}
+
+h1 {    
+    color: black;
+    mix-blend-mode: screen;
 }
 
 .btn-danger {
     right: -50vw;
 }
+
+.cylon {
+    background-image: url("../../assets/cylon.png");
+    height: 50vh;
+    width: 50vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .splash {
+
     height: 100vh;
     width: 100vw;
     background: linear-gradient(90deg, #000000, #000000, #740000, #000000, #000000);

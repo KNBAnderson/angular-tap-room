@@ -1,6 +1,15 @@
-<input type="text" [(ngModel)]="thing">
-
-<h1>{{thing}}</h1>
-
-
-<button (click)="dostuff()"></button>
+<div class="container">
+    <div *ngFor="let keg of kegs">
+        <div class="card hoverable">
+            <h5 class="center-align" >{{keg.name}}</h5>
+            <p class="center-align">APV {{keg.alcohol}}% IBU {{keg.ibu}}</p>            
+            <p class="center-align">{{keg.description}}</p>
+            <p class="center-align">${{keg.price}}/pint  ${{keg.price * 1.5 }}/growler ${{keg.price * 3}}/large growler</p>
+            <img *ngIf="keg.volume >= 120" src="../../assets/keg100.png" alt="image of a full keg">
+            <img *ngIf="keg.volume < 120 && keg.volume >= 100" src="../../assets/keg90.png" alt="image of a mostly full keg">
+            <img *ngIf="keg.volume < 100 && keg.volume >= 62" src="../../assets/keg50.png" alt="image of a half full keg">
+            <img *ngIf="keg.volume <62 && keg.volume > 10" src="../../assets/keg20.png" alt="image of a mostly empty keg">
+            <img *ngIf="keg.volume <= 10" src="../../assets/keg0.png" alt="image of an empty keg">
+        </div>
+    </div>
+</div>

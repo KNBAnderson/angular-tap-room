@@ -1,0 +1,46 @@
+ 
+ @import url('https://fonts.googleapis.com/css?family=Audiowide|Offside|Stalinist+One|Wallpoet|ZCOOL+QingKe+HuangYou&display=swap');
+
+ * {
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */ 
+ }
+
+ .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: grey;
+ }
+
+.container > * {
+    box-sizing: border-box;    
+}
+
+.container > *:not(:last-child) {
+    margin-right: 32px;
+}
+
+.card {
+    flex:0 1 calc(33.3% - 32px);
+    padding: 15px;
+    width: 300px;
+    height: 500px;    
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+h5{
+    font-family: 'Wallpoet', cursive;   
+}
+
+p {
+    font-family: 'Offside', cursive;
+}
+
+img {
+    height: 200px;
+}
