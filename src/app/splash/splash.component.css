@@ -39,7 +39,7 @@ h1 {
 
     height: 100vh;
     width: 100vw;
-    background: linear-gradient(90deg, #000000, #000000, #740000, #000000, #000000);
+    background: linear-gradient(90deg, #000000, #740000, #000000);
     background-size: 1000% 1000%;
     
     -webkit-animation: AnimationName 17s ease infinite;

@@ -32,18 +32,23 @@ export class Taproom{
     }
 
     sellPint(keg) {
-        keg.volume -= 1;
-        this.till += keg.price;
+        if(keg.volume > 0) {
+            keg.volume -= 1;
+            this.till += keg.price;
+        }
     }
 
     sellGrowler(keg) {
-        keg.volume -= 2;
-        this.till += keg.price * 1.5;
+        if(keg.volume > 1) {
+            keg.volume -= 2;
+            this.till += keg.price * 1.5;
+        }
     }
 
     sellLargeGrowler(keg) {
-        keg.volume -= 4;
-        this.till += keg.price * 3;
+        if(keg.volume > 3) {
+            keg.volume -= 4;
+            this.till += keg.price * 3;
+        }
     }
-
 }
